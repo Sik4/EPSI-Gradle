@@ -4,11 +4,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloGradleController {
+public class BoomerangController {
 
-
-    @RequestMapping
-    public String helloGradle() {
-        return "Hello Gradle!";
-    }
+    @RequestMapping("boomerang")
+    public String boomerangGradle() { return "Le boomerang revient!"; }
 }
