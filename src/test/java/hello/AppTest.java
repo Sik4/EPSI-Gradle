@@ -47,4 +47,10 @@ public class AppTest {
                 .andExpect(content().string("Hello PouetPouet!"));
     }
 
+    @Test
+    public void helloEvierMetal() throws Exception {
+        mvc.perform(get("/evier"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Evier Metal!"));
+    }
 }
