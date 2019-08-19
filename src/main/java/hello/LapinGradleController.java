@@ -4,11 +4,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloGradleController {
+public class LapinGradleController {
 
-    @RequestMapping("/")
-    public String helloGradle() {
-        return "Hello Gradle!";
+    @RequestMapping("/lapin")
+    public String killLapin() {
+        return "Le lapin est mort!";
     }
-
 }
