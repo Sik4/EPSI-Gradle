@@ -7,6 +7,11 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -53,4 +58,26 @@ public class AppTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string("Evier Metal!"));
     }
+
+    @Test
+    public void helloBooba() throws Exception {
+        mvc.perform(get("/Booba"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Booba est content de t'accueuillir dans la PIRATERIE!"));
+    }
+
+    @Test
+    public void helloBoobaYourName() throws Exception {
+        List<String> names = Arrays.asList("paul" , "melisse" , "jules");
+        for ( String st : names )
+        {
+            mvc.perform(get("/Booba/"+st))
+                    .andExpect(status().isOk())
+                    .andExpect(content().string(st+", Booba est content de t'accueuillir dans la PIRATERIE!"));
+        }
+
+    }
+
+
+
 }
