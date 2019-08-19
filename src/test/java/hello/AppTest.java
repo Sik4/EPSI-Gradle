@@ -19,16 +19,16 @@ public class AppTest {
 
     @Autowired
     private MockMvc mvc;
-/*
+
     @Test
     public void helloGradle() throws Exception {
         mvc.perform(get("/"))
             .andExpect(status().isOk())
             .andExpect(content().string("Hello Gradle!"));
     }
-*/
+
     @Test
-    public void helloGradle() throws Exception {
+    public void helloGradleNM() throws Exception {
         mvc.perform(get("/lapinNM"))
             .andExpect(status().isOk())
             .andExpect(content().string("Hello Lapin de NM!"));
