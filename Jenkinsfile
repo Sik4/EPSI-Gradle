@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'Ready to build'
+        gradlew('bootJar')
       }
     }
   }
