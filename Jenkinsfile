@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        gradlew('bootJar')
+        gradle('bootJar')
       }
     }
   }
