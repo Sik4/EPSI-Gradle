@@ -3,12 +3,12 @@ pipeline {
   stages {
         stage('Compile') {
             steps {
-                gradlew('clean', 'classes')
+                sh './gradlew bootJar'
             }
         }
         stage('Unit Tests') {
             steps {
-                gradlew('test')
+                sh './gradlew test'
             }
             post {
                 always {
