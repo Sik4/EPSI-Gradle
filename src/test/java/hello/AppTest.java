@@ -27,4 +27,11 @@ public class AppTest {
             .andExpect(content().string("Hello Gradle!"));
     }
 
+    @Test
+    public void pouetPouetGradle() throws Exception {
+        mvc.perform(get("/pouet"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Hello PouetPouet!"));
+    }
+
 }
