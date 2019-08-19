@@ -4,7 +4,9 @@
 # Ignore Gradle build output directory
 build
 
-.vscode/
-.idea/
+# Ignore own files
+/.vscode
+/.idea
 .classpath
 .project
+
