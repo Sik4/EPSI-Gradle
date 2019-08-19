@@ -53,4 +53,11 @@ public class AppTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string("Evier Metal!"));
     }
+    
+    @Test
+    public void boomerangGradle() throws Exception {
+        mvc.perform(get("/boomerang"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Le boomerang revient!"));
+    }
 }

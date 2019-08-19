@@ -6,7 +6,9 @@ build
 
 # Ignore own files
 /.vscode
-/.idea
+.idea
 .classpath
 .project
+
+out
 
