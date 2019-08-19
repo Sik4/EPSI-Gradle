@@ -1,14 +1,15 @@
 package hello;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("/")
+@RestController
 public class HelloGradleController {
 
-    @GetMapping
-    public String helloGradle() {
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@ResponseBody
+    public String HelloGradle() {
         return "Hello Gradle!";
-    }
+    }    
 
 }
