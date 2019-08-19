@@ -3,12 +3,12 @@ package hello;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("/")
-public class HelloGradleController {
+@RestController("/lapin")
+public class LapinController {
 
     @GetMapping
-    public String helloGradle() {
-        return "Hello Gradle!";
+    public String getLapin() {
+        return "Le lapin est mort";
     }
 
 

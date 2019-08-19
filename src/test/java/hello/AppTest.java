@@ -27,4 +27,10 @@ public class AppTest {
             .andExpect(content().string("Hello Gradle!"));
     }
 
+    @Test
+    public void findRabbit() throws Exception {
+        mvc.perform(get("/lapin"))
+            .andExpect(status().isOk())
+            .andExpect(content().string("Le lapin est mort"));
+    }
 }
