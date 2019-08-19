@@ -27,4 +27,11 @@ public class AppTest {
             .andExpect(content().string("Hello Gradle!"));
     }
 
+    @Test
+    public void hoboChange() throws Exception {
+        mvc.perform(get("/hobo"))
+            .andExpect(status().isOk())
+            .andExpect(content().string("Une p'tite pièce ?"));
+    }
+
 }
