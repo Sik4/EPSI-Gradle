@@ -10,5 +10,8 @@ build
 .classpath
 .project
 .idea
+bin
+jenkins.war
+out
 
 gradle-wrapper.properties
