@@ -9,4 +9,6 @@ build
 /.idea
 .classpath
 .project
+.idea
 
+gradle-wrapper.properties
