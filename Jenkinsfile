@@ -1,11 +1,20 @@
 pipeline {
   agent any
   stages {
-    stage('bison') {
-      steps {
-        sh '''nimporte quoi 
-'''
-      }
-    }
+        stage('Compile') {
+            steps {
+                sh 'gradlew bootJar'
+            }
+        }
+        stage('Unit Tests') {
+            steps {
+                sh './gradlew test'
+            }
+            post {
+                always {
+                    junit '**/build/test-results/test/TEST-*.xml'
+                }
+            }
+        }
   }
 }
