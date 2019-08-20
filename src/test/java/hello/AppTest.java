@@ -80,4 +80,11 @@ public class AppTest {
 
 
 
+    @Test
+    public void helloGradleNM() throws Exception {
+        mvc.perform(get("/lapinNM"))
+            .andExpect(status().isOk())
+            .andExpect(content().string("Hello Lapin de NM!"));
+    }
+
 }

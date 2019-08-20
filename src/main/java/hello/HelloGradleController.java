@@ -10,7 +10,7 @@ public class HelloGradleController {
 
     @RequestMapping("/")
     public String helloGradle() {
-        return "Hello Gradle!";
+        return "Hello Lapin!";
     }
 
     @RequestMapping(value = "/Booba", method = RequestMethod.GET)
