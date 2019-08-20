@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Unit Tests') {
             steps {
-                bat './gradlew test'
+                bat 'gradlew test'
             }
             post {
                 always {
